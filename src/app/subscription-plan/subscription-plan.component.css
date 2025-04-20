@@ -1,46 +1,224 @@
-.pricing-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 200px;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-  
-  .card:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card h2 {
-    margin: 0 0 10px;
-  }
-  
-  .card p {
-    font-size: 20px;
-    margin: 10px 0;
-  }
-  
-  .card button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #1976d2;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .card button:hover {
-    background-color: #1565c0;
-  }
-  
+.subscription-plan {
+  padding: 24px;
+}
+.sp-section-title {
+  color: #222b45;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+.sp-section-head {
+  border-bottom: 1px solid #e4e9f2;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.sp-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.single-sp-card {
+  border-radius: 16px;
+  background: #f5fbfa;
+  padding: 28px 32px 24px 32px;
+  position: relative;
+  z-index: 2;
+}
+.single-sp-card::before {
+  position: absolute;
+  content: "";
+  width: 47px;
+  height: 47px;
+  background-image: url("../../assets/images/subscription-plan/pattern.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 16px;
+  right: 32px;
+  z-index: -1;
+}
+.single-sp-head-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  position: relative;
+  border-bottom: 2px dashed #bfd3e4;
+}
+.single-sp-head-title img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.single-sp-head-title h4 {
+  color: #174f7d;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.single-sp-head-text {
+  color: #447197;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  margin: 0;
+}
+.single-sp-body {
+  margin-top: 20px;
+}
+.single-sp-pricing {
+  text-align: center;
+}
+.single-sp-pricing h3 {
+  color: #00a78b;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+.single-sp-pricing h3 span {
+  color: #174f7d;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  position: relative;
+  top: -5px;
+}
+.single-sp-user {
+  text-align: center;
+  margin-top: 8px;
+  color: #174f7d;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.single-sp-trial-btn {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.single-sp-trial-btn a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a78b;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  gap: 8px;
+}
+
+.single-sp-trial-btn {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.single-sp-trial-btn a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a78b;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+.single-sp-trial-btn a:hover {
+  color: #174f7d;
+}
+.single-sp-trial-btn a svg path {
+  transition: all 0.3s ease;
+}
+.single-sp-trial-btn a:hover svg path {
+  fill: #174f7d;
+}
+.single-sp-bottom {
+  margin-top: 20px;
+}
+.single-sp-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 8px;
+  background: #00a78b;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  font-family: "Inter Tight";
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.single-sp-btn:hover {
+  background: #174f7d;
+}
+.single-sp-btn.contact-btn {
+  text-decoration: none;
+  margin-top: 93px;
+}
+
+/* Features  */
+.sp-features-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background: #f5fbfa;
+  padding: 24px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+.sp-features-card {
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+}
+
+.sp-features-head {
+  text-align: center;
+}
+.sp-features-title {
+  margin: 0;
+  border-radius: 24px 8px;
+  background: #f5fbfa;
+  display: inline-block;
+  padding: 8px 20px;
+  color: #174f7d;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.72px;
+}
+.sp-features-card ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
+.sp-features-card ul li {
+  list-style: none;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sp-features-card ul li:last-child {
+  margin: 0;
+}
